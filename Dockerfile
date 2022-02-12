@@ -7,7 +7,7 @@ RUN apt install python3 -y
 
 RUN mkdir /sai
 
-copy app.py ./
+copy app.py ./sai
 
 WORKDIR /sai
 
