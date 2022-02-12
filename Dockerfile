@@ -9,6 +9,8 @@ RUN apt update
 #RUN apt install httpd
 #RUN apt install python3 -y
 
+FROM nginx:latest
+
 RUN mkdir /sai
 
 WORKDIR /sai
