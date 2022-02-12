@@ -6,8 +6,8 @@ ARG version=latest
 FROM ${baseimage}:${version}
 
 RUN apt update
-RUN apt install httpd -y
-RUN apt install python3 -y
+#RUN apt install httpd
+#RUN apt install python3 -y
 
 RUN mkdir /sai
 
@@ -15,7 +15,7 @@ WORKDIR /sai
 
 copy elegant_website ./sai 
 
-EXPOSE 80
+EXPOSE 81
 
 # copy app.py ./sai
 
