@@ -12,7 +12,7 @@ RUN apt update
 RUN apt install nginx -y
 #RUN apt install -y httpd
 
-WORKDIR /var/www/html/
+#WORKDIR /var/www/html/
 #RUN mkdir /sai
 #WORKDIR /sai
 
