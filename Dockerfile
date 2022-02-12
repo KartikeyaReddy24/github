@@ -1,10 +1,16 @@
-FROM ubuntu:latest
+ARG baseimage = ubuntu:latest
+
+FROM $baseimage
 
 RUN apt update
 RUN apt install python3 -y
 
-WORKDIR /usr/app/src
+RUN mkdir /sai
 
-copy app.py ./
+WORKDIR /sai
 
-CMD [ "python3", "./app.py"]
+# WORKDIR /usr/app/src
+
+# copy app.py ./
+
+# CMD [ "python3", "./app.py"]
