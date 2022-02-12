@@ -1,6 +1,9 @@
-ARG baseimage=ubuntu:latest
+#ARG baseimage=ubuntu:latest
+#FROM $basimage
 
-FROM $baseimage
+ARG baseimage=ubuntu
+ARG version=latest
+FROM ${baseimage}:${version}
 
 RUN apt update
 RUN apt install python3 -y
@@ -9,11 +12,13 @@ RUN mkdir /sai
 
 WORKDIR /sai
 
-copy app.py ./sai
+copy elegant_website ./sai 
 
-RUN zypper update --no-confirm --no-recommends \
-    && zypper install --no-confirm --no-recommends git \
-    && zypper clean --all
+# copy app.py ./sai
+
+#RUN zypper update --no-confirm --no-recommends \
+ #   && zypper install --no-confirm --no-recommends git \
+ #   && zypper clean --all
 
 # WORKDIR /usr/app/src
 
