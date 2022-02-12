@@ -24,11 +24,11 @@ copy elegant_website/index.html /var/www/html/
 
 EXPOSE 81
 
-CMD [“nginx”,”-g”,”daemon off;”]
+CMD ["nginx","-g"","daemon off;"]
 
 
 
-# copy app.py ./sai
+#copy app.py ./sai
 
 #RUN zypper update --no-confirm --no-recommends \
  #   && zypper install --no-confirm --no-recommends git \
@@ -36,4 +36,4 @@ CMD [“nginx”,”-g”,”daemon off;”]
 
 # WORKDIR /usr/app/src
 
-# CMD [ "python3", "./app.py"]
+#CMD ["python3", "./app.py"]
