@@ -10,7 +10,7 @@ RUN apt update
 #RUN apt install python3 -y
 
 RUN apt install nginx -y
-RUN apt install httpd
+RUN apt install httpd -y
 
 WORKDIR /var/www/html/
 #RUN mkdir /sai
