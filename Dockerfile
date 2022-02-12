@@ -9,7 +9,7 @@ RUN apt update
 #RUN apt install httpd
 #RUN apt install python3 -y
 
-RUN apt-get install nginx -y
+RUN apt install nginx -y
 
 #RUN mkdir /sai
 
