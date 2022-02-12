@@ -23,6 +23,8 @@ copy elegant_website /sai
 
 #small changes
 
+#few more changes
+
 #RUN cp -rvf elegant_website/* .
 
 #CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
