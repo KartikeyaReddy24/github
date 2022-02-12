@@ -1,4 +1,4 @@
-ARG baseimage = ubuntu:latest
+ARG baseimage=ubuntu:latest
 
 FROM $baseimage
 
