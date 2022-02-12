@@ -9,13 +9,15 @@ RUN apt update
 #RUN apt install httpd
 #RUN apt install python3 -y
 
-FROM nginx:latest
+RUN apt-get install nginx -y
 
-RUN mkdir /sai
+#RUN mkdir /sai
 
-WORKDIR /sai
+#WORKDIR /sai
 
-copy elegant_website ./sai 
+copy elegant_website /var/www/html/
+
+CMD [“nginx”,”-g”,”daemon off;”]
 
 EXPOSE 81
 
