@@ -21,6 +21,8 @@ WORKDIR /sai
 
 copy elegant_website /sai
 
+#small changes
+
 #RUN cp -rvf elegant_website/* .
 
 #CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
