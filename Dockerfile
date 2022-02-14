@@ -4,7 +4,7 @@
 ## changes made
 
 ARG baseimage=centos
-ARG version=latest
+ARG version=7
 FROM ${baseimage}:${version}
 
 RUN yum install -y httpd \
