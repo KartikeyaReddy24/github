@@ -1,3 +1,31 @@
+# CENTOS BASED
+
+ARG baseimage=centos
+ARG version=latest
+FROM ${baseimage}:${version}
+
+RUN yum install -y httpd \
+ zip \
+ unzip
+
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page275/elegant.zip /var/www/html
+WORKDIR /var/www/html
+RUN unzip elegant.zip
+RUN cp -rvf elegant/* .
+RUN rm -rf elegant elegant.zip
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+EXPOSE 80
+
+
+
+
+
+
+
+
+
+# UBUNTU BASED
+
 #ARG baseimage=ubuntu:latest
 #FROM $basimage
 
@@ -6,7 +34,7 @@ ARG version=latest
 FROM ${baseimage}:${version}
 
 RUN apt update
-#RUN apt install httpd
+RUN apt install httpd
 RUN apt install python3 -y
 
 #RUN apt install nginx -y
