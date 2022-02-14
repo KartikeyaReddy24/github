@@ -1,6 +1,8 @@
 # CENTOS BASED
 #small changes
 
+## changes made
+
 ARG baseimage=centos
 ARG version=latest
 FROM ${baseimage}:${version}
